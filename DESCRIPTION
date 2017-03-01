@@ -1,0 +1,10 @@
+Package: birthdayproblem
+Title: Functionality for handling the birthday problem with unequal probabilities
+Version: 0.0.0.9000
+Authors@R: person("Michael", "Höhle", email = "hoehle@math.su.se", role = c("aut", "cre"))
+Description: The package contains a simple function for computing the probability that in a group of n people, with ppl originating from one of N classes, that two or more people in the group are of the same class.
+Depends: R (>= 3.3.2)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
