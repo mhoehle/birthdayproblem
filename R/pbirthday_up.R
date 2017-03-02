@@ -21,22 +21,25 @@ facpoly <- function(x, m) {
 #' of the birthday problem with unequal occurrence probabilities.
 #'
 #' @param n Size of the set
-#' @param prob Occurrence probabilities. The length of @prob determines N.
-#' @param method A string describing which computational method to use. "R" (the default) works in acceptable time up to n's of about 30. The "Rcpp" options works for larger n of moderate size, e.g., n=60 takes about 3 minutes.
+#' @param prob Vector containing the occurrence probabilities. The length of \code{prob} determines N.
+#' @param method A string describing which computational method to use. \code{"R"} (the default) works in acceptable time up to n's of about 30. The \code{"Rcpp"} options works for larger n of moderate size, e.g., n=60 takes about 3 minutes. For larger n or faster computation one can use the \code{"mase1992"} approximation, which is surprisingly accurate.
 #'
 #' @return A list containing the following elements:
-#'    \code{prob} The probability for at least one collision
-#'    \code{tList} A matrix containing all compositions of singletons,
-#'     dubletons, each row has the property sum(row * 1:n) == n.
-#'    ...
+#' \describe{
+#'    \item{\code{prob}}{(numeric) The probability for at least one collision}
+#'    \item{\code{tList}}{A matrix containing all compositions of singletons,
+#'     dubletons, each row has the property sum(row * 1:n) == n.}
+#'    \item{...}{}
+#' }
 #' @importFrom utils read.table
 #' @importFrom Rcpp sourceCpp
 #' @examples
 #' pbirthday(n=26, classes=365, coincident=2)
 #' pbirthday_up(n=26L, prob=rep(1/365,365), method="R")$prob
 #' pbirthday_up(n=26L, prob=rep(1/365,365), method="Rcpp")$prob
-#' @source H\enc{ö}{oe}hle M, Happy pbirthday class of 2016, \url{http://staff.math.su.se/hoehle/blog/2017/02/13/bday.html}
-#' @source H\enc{ö}{oe}hle M, US Babyname Collisions 1880-2014, \url{http://staff.math.su.se/hoehle/blog/2017/03/01/morebabynames.html}
+#' @references Mase, S. 1992. “Approximations to the Birthday Problem with Unequal Occurrence Probabilities and Their Application to the Surname Problem in Japan.” Ann. Inst. Stat. Math. 44 (3): 479–99. \url{http://www.ism.ac.jp/editsec/aism/pdf/044_3_0479.pdf}.
+#' @references H\enc{ö}{oe}hle, M., Happy pbirthday class of 2016, \url{http://staff.math.su.se/hoehle/blog/2017/02/13/bday.html}.
+#' @references H\enc{ö}{oe}hle, M., US Babyname Collisions 1880-2014, \url{http://staff.math.su.se/hoehle/blog/2017/03/01/morebabynames.html}.
 #' @export
 ######################################################################
 
