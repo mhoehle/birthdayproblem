@@ -11,4 +11,3 @@ Install package using:
 
     devtools::install_github("hoehleatsu/birthdayproblem")
 
-```
