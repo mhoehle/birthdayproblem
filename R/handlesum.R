@@ -1,6 +1,8 @@
 #' Make syntax for nested for loop function in R
 #' @param n The number of people in the "class"
 #' @return Returns a function entitled \code{compute_tList}
+#' @noRd
+
 make_tListFunc_syntax <- function(n) {
   str <- NULL
   str <- rbind(str, "compute_tList <- function() {")
@@ -24,9 +26,9 @@ make_tListFunc_syntax <- function(n) {
 }
 
 #' Make syntax for nested for loop function in Rcpp
-#' @import Rcpp
 #' @param n The number of people in the "class"
 #' @return Returns a function entitled \code{compute_tList}
+#' @noRd
 #'
 make_tListFunc_syntax_rcpp <- function(n) {
   str <- NULL

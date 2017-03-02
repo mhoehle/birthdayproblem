@@ -5,6 +5,7 @@
 #' @param x Base
 #' @param m index
 #' @return (x)_m
+#' @noRd
 ##########################################################################
 
 facpoly <- function(x, m) {
@@ -26,11 +27,13 @@ facpoly <- function(x, m) {
 #'    \code{tList} A matrix containing all compositions of singletons,
 #'     dubletons, each row has the property sum(row * 1:n) == n.
 #'    ...
-#'
+#' @importFrom utils read.table
+#' @importFrom Rcpp sourceCpp
 #' @examples
 #' pbirthday(n=26, classes=365, coincident=2)
 #' pbirthday_up(n=26L, prob=rep(1/365,365), method="R")$prob
 #' pbirthday_up(n=26L, prob=rep(1/365,365), method="Rcpp")$prob
+#' @source H\enc{ö}{oe}hle M, Happy pbirthday class of 2016, \url{http://staff.math.su.se/hoehle/blog/2017/02/13/bday.html}
 #' @export
 ######################################################################
 

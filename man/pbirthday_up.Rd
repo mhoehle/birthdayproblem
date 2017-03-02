@@ -6,6 +6,9 @@
 of n individuals sampled iid. from a vector of length N with
 occurrence probabilities as given by the vector p. This is an instance
 of the birthday problem with unequal occurrence probabilities.}
+\source{
+H\enc{ö}{oe}hle M, Happy pbirthday class of 2016, \url{http://staff.math.su.se/hoehle/blog/2017/02/13/bday.html}
+}
 \usage{
 pbirthday_up(n, prob, method = c("R", "Rcpp", "mase1992"))
 }
