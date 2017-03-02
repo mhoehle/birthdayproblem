@@ -13,7 +13,9 @@ facpoly <- function(x, m) {
 }
 
 ######################################################################
-#' This calculates the probability for at least one collision in a set
+#' Variant of \code{pbirthday}, which handles unequal occurrence probabilites
+#'
+#' This function calculates the probability for at least one collision in a set
 #' of n individuals sampled iid. from a vector of length N with
 #' occurrence probabilities as given by the vector p. This is an instance
 #' of the birthday problem with unequal occurrence probabilities.
@@ -34,6 +36,7 @@ facpoly <- function(x, m) {
 #' pbirthday_up(n=26L, prob=rep(1/365,365), method="R")$prob
 #' pbirthday_up(n=26L, prob=rep(1/365,365), method="Rcpp")$prob
 #' @source H\enc{ö}{oe}hle M, Happy pbirthday class of 2016, \url{http://staff.math.su.se/hoehle/blog/2017/02/13/bday.html}
+#' @source H\enc{ö}{oe}hle M, US Babyname Collisions 1880-2014, \url{http://staff.math.su.se/hoehle/blog/2017/03/01/morebabynames.html}
 #' @export
 ######################################################################
 

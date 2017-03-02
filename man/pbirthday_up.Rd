@@ -2,12 +2,11 @@
 % Please edit documentation in R/pbirthday_up.R
 \name{pbirthday_up}
 \alias{pbirthday_up}
-\title{This calculates the probability for at least one collision in a set
-of n individuals sampled iid. from a vector of length N with
-occurrence probabilities as given by the vector p. This is an instance
-of the birthday problem with unequal occurrence probabilities.}
+\title{Variant of \code{pbirthday}, which handles unequal occurrence probabilites}
 \source{
 H\enc{ö}{oe}hle M, Happy pbirthday class of 2016, \url{http://staff.math.su.se/hoehle/blog/2017/02/13/bday.html}
+
+H\enc{ö}{oe}hle M, US Babyname Collisions 1880-2014, \url{http://staff.math.su.se/hoehle/blog/2017/03/01/morebabynames.html}
 }
 \usage{
 pbirthday_up(n, prob, method = c("R", "Rcpp", "mase1992"))
@@ -27,7 +26,7 @@ A list containing the following elements:
    ...
 }
 \description{
-This calculates the probability for at least one collision in a set
+This function calculates the probability for at least one collision in a set
 of n individuals sampled iid. from a vector of length N with
 occurrence probabilities as given by the vector p. This is an instance
 of the birthday problem with unequal occurrence probabilities.
